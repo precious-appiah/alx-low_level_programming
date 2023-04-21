@@ -5,8 +5,8 @@
 /**
  * main - Entry point
  *
- * return : 0 for success
-*/
+ * Return: 0 for success
+ */
 /* betty style doc for function main goes there */
 int main(void)
 {

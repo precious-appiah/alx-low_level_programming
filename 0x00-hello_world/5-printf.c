@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-/*main -entry siurce code and
- *  the print function prints a string and
- *   return an  integer
- */
-
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+*/
 int main(void)
 {
 	printf("with proper grammar, but the outcome is a piece of art,\n");

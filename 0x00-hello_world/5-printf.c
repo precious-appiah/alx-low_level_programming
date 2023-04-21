@@ -1,6 +1,9 @@
 #include <stdio.h>
 
-/*this function prints a string and return an  integer */
+/*main -entry siurce code and
+ *  the print function prints a string and
+ *   return an  integer
+ */
 
 int main(void)
 {

@@ -1,4 +1,3 @@
-#include <ctype.h>
 #include "main.h"
 /**
  * _islower - code returns 1 for lower
@@ -8,7 +7,7 @@
 */
 int _islower(int c)
 {
-	if (tolower(c))
+	if (c >= 97 && c <= 122)
 		return (1);
 	else
 		return (0);

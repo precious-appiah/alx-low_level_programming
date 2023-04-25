@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <main.h>
 /**
  * main - contains main code
  * Return: return type when successfule

@@ -21,7 +21,7 @@ int main(void)
 		}
 		else if (1 % 15 == 0)
 		{
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 		}
 		else
 		{

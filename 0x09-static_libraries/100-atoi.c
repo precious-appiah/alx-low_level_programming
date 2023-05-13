@@ -7,7 +7,7 @@
  */
 int _atoi(char *s)
 {
-	int len = strlen(s);
+	_putchar(s[0]);
 
-	return (len);
+	return (0);
 }

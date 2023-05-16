@@ -10,7 +10,7 @@ char *str_concat(char *s1, char *s2)
 {
 	char *str_alloc;
 	char *str_cat;
-	int i, k, l, m, n = 0;
+	int i, k, m = 0;
 	int len;
 	int j = 0;
 
@@ -39,7 +39,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	while (m <= k)
 	{
-		str_cat[j] = str[l];
+		str_cat[j] = s2[l];
 		j++;
 	}
 	while (m <= len)

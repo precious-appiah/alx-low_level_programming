@@ -8,9 +8,12 @@
 char *_strdup(char *str)
 {
 	char *str_alloc;
-	int i = 0;
+	int i, k = 0;
 	int len;
 	int j = 0;
+
+	if (str == NULL)
+		return (NULL);
 
 	while (*(str + i) != '\0')
 	{
@@ -28,5 +31,13 @@ char *_strdup(char *str)
 		str_alloc[j] = str[j];
 		j++;
 	}
+	while (*(str_alloc + k) != '\0')
+	{
+		k++;
+	}
+	k++;
+
+	if (k != len)
+		return (NULL);
 	return (str_alloc);
 }

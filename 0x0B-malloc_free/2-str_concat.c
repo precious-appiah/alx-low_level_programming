@@ -35,7 +35,7 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	for (m = 0; m < i; m++)
 	{
-		str_alloc[m] = s1[0];
+		str_alloc[m] = s1[m];
 	}
 	for (n = 0; n < k; n++)
 	{

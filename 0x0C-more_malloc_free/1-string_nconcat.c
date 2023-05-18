@@ -10,8 +10,8 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str_alloc;
-	int i = 0, j = 0, k = 0, l = 0;
-	int m, len;
+	unsigned int i = 0, j = 0, k = 0, l = 0;
+	unsigned int m, len;
 
 	if (s1 == NULL)
 		s1 = "";

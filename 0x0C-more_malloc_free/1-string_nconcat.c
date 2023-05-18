@@ -44,6 +44,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		str_alloc[i + l] = s2[l];
 		l++;
 	}
-	str_alloc[len] = '\0';
+	str_alloc[i + m] = '\0';
 	return (str_alloc);
 }

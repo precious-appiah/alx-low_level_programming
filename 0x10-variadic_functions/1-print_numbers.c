@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdarg.h>
 #include <variadic_functions.h>
 /**
  * print_numbers - function to print all numbers
@@ -13,6 +11,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list arg;
 
 	va_start(arg, n);
-	if (n = NULL)
-		
-	for (i = 0; i < n; i++) 
+	if (separator == NULL)
+		separator = "";
+	for (i = 0; i < n; i++)
+	{
+		printf("%d", va_arg(arg, int));
+		if (i < n - 1)
+			printf("%s", separator);
+	}
+}

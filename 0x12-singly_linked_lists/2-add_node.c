@@ -13,13 +13,11 @@ list_t *add_node(list_t **head, const char *str)
 {
 	int i = 0;
 
-	char *dupstr = strd(*str);
+	char *dupstr = strdup(str);
 
 	while (*(str + i) != '\0')
 		i++;
 	i++;
-
-	char *dupstr = strd(*str);
 
 	list_t *new_node = malloc(sizeof(list_t));
 

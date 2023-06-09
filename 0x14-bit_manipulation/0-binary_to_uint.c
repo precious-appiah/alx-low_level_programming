@@ -44,9 +44,9 @@ int convert_to_num(const char *b)
 	}
 	while (*(b + i) != '\0')
 	{
-		if (b[i] < '0' || b[i] > '9')
+		if (b[i] < '0' || b[i] > '1')
 			return (0);
-		num = num * 10 + (b[i] - '0');
+		num = num * 2 + (b[i] - '0');
 		i++;
 	}
 	return (num);

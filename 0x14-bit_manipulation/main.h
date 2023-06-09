@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 int _putchar(char c);
 int convert_to_num(const char *b);
 unsigned int binary_to_uint(const char *b);

@@ -9,7 +9,9 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 	int val;
-	int i = 0;
+	int i, j = 0;
+
+	un
 
 	if (n == 0 && i == index)
 		return (0);

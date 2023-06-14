@@ -6,7 +6,7 @@ int fileExists(const char *filename);
 /**
  * create_file - function to create file
  * @filename: name of file to be created
- * @test_content: content to write
+ * @text_content: content to write
  * Return:int
  */
 
@@ -37,13 +37,14 @@ int create_file(const char *filename, char *text_content)
 
 	/*set permissions*/
 	result = chmod("example.txt", S_IRUSR | S_IWUSR | grp_perm | oth_perm);
-	
 	if (result != 0)
 		return (-1);
 	return (1);
 }
-/*int fileExists(const char *filename)
-{
-	struct stat buffer;
-	return (stat(filename, &buffer) == 0);
-}*/
+/*
+ * int fileExists(const char *filename)
+ * {
+ * struct stat buffer;
+ * return (stat(filename, &buffer) == 0);
+ * }
+*/

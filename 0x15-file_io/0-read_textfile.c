@@ -24,6 +24,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	info_read = fread(f_size, sizeof(char), (letters + 1), fp);
+	f_size[info_read] = '\0';
 	printf("%s", f_size);
 	/**write(1, f_size, (letters + 1));*/
 	return (info_read);

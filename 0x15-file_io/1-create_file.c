@@ -1,5 +1,6 @@
 #include "main.h"
 #include <sys/stat.h>
+#include <string.h>
 
 int fileExists(const char *filename);
 /**
@@ -12,10 +13,9 @@ int fileExists(const char *filename);
 int create_file(const char *filename, char *text_content)
 {
 	/*return 0 if exist, -1 if it doesn't */
-	int file_exits;
-	FILE *fp = filename;
+	FILE *fp;
 	char *storage;
-	mode_t grp_perm, oth_perm = ~S_IWRXG;
+	mode_t grp_perm, oth_perm = ~S_IRWXG;
 
 	if (filename == NULL)
 		return (-1);
@@ -30,7 +30,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (count != strlen(text_content))
 		return (-1);
-	fclose();
+	fclose(fp);
 
 	/*set permissions*/
 	int result = chmod("example.txt", S_IRUSR | S_IWUSR | grp_perm | oth_perm);

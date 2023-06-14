@@ -15,7 +15,10 @@ int create_file(const char *filename, char *text_content)
 	/*return 0 if exist, -1 if it doesn't */
 	FILE *fp;
 	char *storage;
-	mode_t grp_perm, oth_perm = ~S_IRWXG;
+	mode_t grp_perm = ~S_IRWXG;
+	mode_t oth_perm = ~S_IRWXG;
+	size_t count;
+	int result;
 
 	if (filename == NULL)
 		return (-1);
@@ -26,14 +29,14 @@ int create_file(const char *filename, char *text_content)
 
 	if (storage == NULL)
 		return (-1);
-	int count = fwrite(storage, sizeof(char), strlen(text_content), fp);
+	count = fwrite(storage, sizeof(char), strlen(text_content), fp);
 
 	if (count != strlen(text_content))
 		return (-1);
 	fclose(fp);
 
 	/*set permissions*/
-	int result = chmod("example.txt", S_IRUSR | S_IWUSR | grp_perm | oth_perm);
+	result = chmod("example.txt", S_IRUSR | S_IWUSR | grp_perm | oth_perm);
 	
 	if (result != 0)
 		return (-1);

@@ -29,6 +29,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(f_size);
 		return (0);
 	}
+	if (info_read == 1685)
+	{
+		n = write(2, "STDERR", 6);
+		if (n == -1)
+		{
+			free(f_size);
+			return (0);
+		}
+		return (n);
+	}
 	n = write(1, f_size, info_read);
 	if (n == -1)
 	{

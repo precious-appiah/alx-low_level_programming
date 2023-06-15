@@ -19,11 +19,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (file_open_desc < 3)
 		return (0);
 
-	f_size = malloc((letters) * sizeof(char));
+	f_size = malloc((letters + 1) * sizeof(char));
 
 	if (f_size == NULL)
 		return (0);
 	info_read = read(file_open_desc, f_size, letters);
+	f_size[info_read] = '\0';
 	if (info_read == -1)
 		return (0);
 	n = write(1, f_size, info_read);

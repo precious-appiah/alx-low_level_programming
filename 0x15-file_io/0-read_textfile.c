@@ -9,7 +9,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *f_size;
 	int info_read;
-	size_t n;
+	int n;
 	int file_open_desc;
 
 	if (filename == NULL)
@@ -26,8 +26,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	info_read = read(file_open_desc, f_size, letters);
 	if (info_read == -1)
 		return (0);
-	n = write(1, f_size, letters);
-	if (n != letters)
+	n = write(1, f_size, info_read);
+	if (n == -1)
 		return (0);
 	return (n);
 }

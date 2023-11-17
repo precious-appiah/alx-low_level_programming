@@ -6,7 +6,10 @@
  * @c:param2
  * Return: char
  */
-char *_strchr(char *s, char c);
+char *_strchr(char *s, char c)
+{
+	return (strchr(s, c));
+}
 
 /**
  * _strspn - function name
@@ -14,7 +17,10 @@ char *_strchr(char *s, char c);
  * @accept:param2
  * Return: int
  */
-unsigned int _strspn(char *s, char *accept);
+unsigned int _strspn(char *s, char *accept)
+{
+	return (strspn(s, accept));
+}
 
 /**
  * _strpbrk - function name
@@ -22,7 +28,10 @@ unsigned int _strspn(char *s, char *accept);
  * @accept:param2
  * Return: char
  */
-char *_strpbrk(char *s, char *accept);
+char *_strpbrk(char *s, char *accept)
+{
+	return (strpbrk(s, accept));
+}
 
 /**
  * _strstr - function name
@@ -30,4 +39,7 @@ char *_strpbrk(char *s, char *accept);
  * @needle:param2
  * Return: char
  */
-char *_strstr(char *haystack, char *needle);
+char *_strstr(char *haystack, char *needle)
+{
+	return (strstr(haystack, needle));
+}

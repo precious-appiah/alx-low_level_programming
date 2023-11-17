@@ -5,14 +5,20 @@
  * @s: param
  * Return: integer
  */
-int _strlen(char *s);
+int _strlen(char *s)
+{
+	return (strlen(s));
+}
 
 /**
  * _puts - function name
  * @s: param
  * Return: nothing
  */
-void _puts(char *s);
+void _puts(char *s)
+{
+	puts(s);
+}
 
 /**
  * _strcpy - function name
@@ -20,14 +26,20 @@ void _puts(char *s);
  * @src: param2
  * Return: char
  */
-char *_strcpy(char *dest, char *src);
+char *_strcpy(char *dest, char *src)
+{
+	return (strcpy(dest, src));
+}
 
 /**
  * _atoi - function name
  * @s: param
  * Return: integer
  */
-int _atoi(char *s);
+int _atoi(char *s)
+{
+	return (atoi(s));
+}
 
 /**
  * _strcat - function name
@@ -35,4 +47,7 @@ int _atoi(char *s);
  * @src: param2
  * Return: char
  */
-char *_strcat(char *dest, char *src);
+char *_strcat(char *dest, char *src)
+{
+	return (strcat(dest, src));
+}

@@ -9,6 +9,7 @@ void hash_table_delete(hash_table_t *ht)
 {
 	unsigned long int i;
 	hash_node_t *node, *temp;
+	hash_table_t *head = ht;
 
 	if (ht == NULL)
 		return;
@@ -21,16 +22,15 @@ void hash_table_delete(hash_table_t *ht)
 
 			while (node != NULL)
 			{
-				temp = node;
-				node = node->next;
-				free(temp->key);
-				free(temp->value);
-				free(temp);
+				temp = node->next;
+				free(node->key);
+				free(node->value);
+				free(node);
+				node = temp
 			}
 		}
 	}
 
-	free(ht->array);
-	free(ht);
-	ht = NULL;
+	free(head->array);
+	free(head);
 }
